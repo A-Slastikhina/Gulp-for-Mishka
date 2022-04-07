@@ -1,0 +1,362 @@
+
+*
+    margin: 0
+    padding: 0
+*, ::after, ::before
+    box-sizing: border-box
+
+
+.body
+    font-family: "Open Sans"
+
+
+
+$main-color: #000000
+$main-size:53px
+$main-weight:bold
+$main-font: "Open Sans"
+$border-color:#e7e7e7
+$main-green: #63d1bb
+$main-gray: #444444
+$tablet-width:768px
+$mobile-width:320px
+
+.button
+    border: 1px solid $main-gray
+    background-color: #ffffff
+    height: 50px
+    text-transform: uppercase
+    font-size: 17px
+    line-height: 20px
+    font-weight: bold
+
+.section-title
+    display: inline
+    font-weight: $main-weight
+    font-size: $main-size
+    color:$main-color
+
+
+%specials-header-separ
+    list-style-type: none
+    height: 70px
+    display: flex
+    align-items: center
+    box-shadow: inset -1px 0 0 0  $border-color
+
+    
+/*Шапка*/
+
+.header__wrapper
+    width: 1050px
+    margin: 0 auto
+.border-wrap 
+    width: 1150px
+    margin: 0 auto
+.page-header
+    background-color: #ffffff
+    font-size: 19px
+    font-weight: bold
+    font-family: $main-font
+    & a 
+        text-decoration: none
+        color: #000000   
+
+.border-wrap
+    border-bottom:1px solid $border-color
+
+    
+.nav__list
+    padding-left: 0%
+    display: flex
+    justify-content: space-between
+    height: 100%
+    
+.site-list__item  
+    list-style-type: none
+    height: 70px
+    display: flex
+    align-items: center
+    &--basket
+        list-style-type: none
+        height: 70px
+        display: flex
+        align-items: center
+        padding-right: 45px
+        padding-left: 45px
+        display: flex
+        align-items: center
+        box-shadow: inset 1px 0 0 0  $border-color 
+    &--search 
+        list-style-type: none
+        height: 70px
+        display: flex
+        align-items: center
+        padding-right: 10px
+        padding-left: 45px
+        display: flex
+        align-items: center
+        box-shadow: inset 1px 0 0 0  $border-color
+    &--catalog
+        @extend %specials-header-separ
+        padding-right: 20px   
+
+.nav__item 
+    text-decoration: none
+    color: #000000
+    
+  
+    &--basket
+        list-style-type: none
+        background-image: url("../img/cart.svg.png")
+        background-repeat: no-repeat
+        width: 21px
+        height: 18px
+    &--search
+        list-style-type: none
+        background-repeat: no-repeat
+        background-image: url("../img/search.svg.png")
+        width: 21px
+        height: 18px   
+        
+    &--index
+        width: 149px
+        height: 72px
+        margin-right: 55px
+        background-image: url("../img/mishka-logo-desktop.png")
+        background-repeat: no-repeat
+
+
+@media (max-width: $tablet-width) 
+    .border-wrap
+        width: 668px
+        margin: 0 auto
+    .header__wrapper
+        width: 668px
+        margin: 0 auto
+    .nav__listпгдз
+        display: flex
+        justify-content: space-between
+    
+    .site-list__item--catalog
+        display: none
+
+    .hidden
+        display: none
+    .nav__item--index
+        background-image: url("../img/mishka-logo-tablet.png")
+        height: 46px
+        width: 113px
+        align-items: center
+
+
+//Заглавный блок
+.hero__wrapper
+    max-width: 1050px
+    margin: 0 auto
+    box-sizing: border-box
+.hero 
+    position: relative
+    background-color: #f9f9f9
+    height: 90vh
+    background-image: url("../img/hero-desktop.jpg")
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+
+.hero-nav__list 
+    padding-left: 0%
+    display: flex
+    align-items: center
+    max-width: 1050px
+
+.site-list__item
+    &--bottom 
+        font-size: 15px
+        margin-top: 10px
+        font-weight: 700
+        list-style-type: none
+        padding-right: 50px
+        font-family: $main-font
+
+    &--bottom-delivery
+        font-size: 15px
+        margin-top: 10px
+        font-weight: normal
+        list-style-type: none
+        color: $main-gray
+        padding-left: 428px
+        font-family: $main-font
+
+
+.hero__title 
+    padding-top: 70px
+    font-size: 53px
+    font-family: 'Open Sans'
+    text-align: center
+      
+.hero__list 
+    position: absolute
+    max-width: 1050px
+    padding-left: 0
+    bottom: 0
+    display: flex
+    list-style: none
+    &::after 
+        max-width: 1050px
+        position: absolute
+        bottom: -10%
+        content: url("../img/zigzag-fill-desktop.svg.png")
+
+.hero__link
+    text-decoration: none
+    color:#ffffff
+    font-size: 20px
+    font-family: 'Open Sans'
+    text-align: center
+
+%specials-hero-item
+    flex-grow: 1
+    display: flex
+    justify-content: space-between
+    padding:33px
+
+.hero__item--interior 
+    @extend %specials-hero-item
+    background-color: $main-green
+    &::after
+        content: url("../img/interior.svg.png")
+
+.hero__item--toys
+    @extend %specials-hero-item
+    background-color: #56c3b2
+    &::after 
+        content: url("../img/toy-svg.png")
+
+@media screen and ( max-width: $tablet-width )
+    .hero__wrapper
+        max-width: 668px
+        margin: 0 auto
+    .hero
+        /*background-size: 768px
+        max-width: 668px
+    .hero-nav__list 
+        max-width: 668px
+        
+    .hero__list 
+        &::after 
+            max-width: 668px
+            
+    .site-list__item 
+        &--bottom-delivery
+            padding-left: 0px 
+ 
+//Товар недели
+.week-product
+    box-sizing: border-box
+    margin-top: 100px
+        
+.week-product__wrapper
+    max-width: 1050px
+    margin: 0 auto  
+    &::after
+        content: url("../img/zigzag-line-desktop.svg.png")
+        display: flex
+        padding-top: 100px
+        justify-content: center  
+.section-title--week-prod
+    display: inline-block
+    max-width: 170px
+    text-align: center
+    text-transform: uppercase
+    font-family: $main-font
+    font-size: 17px
+    line-height: 16px
+    color: $main-green
+    vertical-align: top
+    padding: 21px
+
+.week-product__info
+    max-width: 700px
+    display: inline-block
+    position: relative
+    z-index: 1
+    
+        
+.week-product__name
+    display: inline
+    position: inherit
+    font-size: $main-size
+    font-family: $main-font
+    font-weight: $main-weight
+
+.week-product__description
+    font-family: $main-font
+    max-width: 300px
+    font-size: 17px
+    line-height: 30px
+    color: $main-gray
+    margin-top: 60px
+    margin-bottom: 60px
+
+.week-product__char
+    line-height: 39px
+    max-width: 300px
+    border-bottom: 1px solid $border-color
+
+.week-product__desc
+    display: inline-block
+    width: 98px
+ 
+.week-product__price
+    margin-top: 110px
+    color: $main-gray
+    font-size: 20px
+    font-weight: bold
+    text-align: center
+    width: 300px
+
+.week-product__button 
+    margin-top: 45px
+    width: 300px
+
+.week-product__img
+    position: absolute
+    left: 50%
+    z-index: 0
+@media screen and ( max-width: $tablet-width )
+    .week-product__wrapper
+        max-width: $tablet-width
+    .week-product__img
+       display: block
+    .week-product
+        &::after
+            max-width: $tablet-width
+
+//Коротко о нас 
+.advantages
+    margin-top: 200px
+
+.advantages__list
+    list-style: none
+    margin-top: 40px
+    max-width: 900px
+   
+   
+.advantages__item
+    display: inline-block
+    margin-right: 140px
+    width: 300px
+    margin-bottom: 60px
+.advantages__text
+    margin-top: 20px
+    font-size: 20px
+    font-weight: $main-weight
+
+.reviews
+    display: flex
+
+.test
+    display: flex
+    align-items: center
+    justify-content: space-between
