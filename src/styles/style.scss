@@ -138,7 +138,7 @@ $mobile-width:320px;
 }
 &:active {
     opacity: 0.3;
-}
+    }
     &--basket {
         list-style-type: none;
         background-image: url("../img/cart.svg.png");
@@ -178,7 +178,8 @@ $mobile-width:320px;
     transition: 0.5s;
     }
     &--index:active {
-    opacity: 0.3;    }
+    opacity: 0.3;
+    }
 
 }
 
