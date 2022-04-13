@@ -122,7 +122,7 @@ $mobile-width:320px;
     color: #000000;
 &:hover {
     opacity: 0.66;
-    transition: 0.5s;
+    transition: 0.9s;
 }
 &:active {
     opacity: 0.3;
@@ -136,7 +136,7 @@ $mobile-width:320px;
     }
     &--basket:hover {
         background-image: url("../img/cart-hover.png");
-        transition: 0.5s;
+        transition: 0.9s;
     }
     &--basket:active {
         opacity: 0.3;
@@ -150,7 +150,7 @@ $mobile-width:320px;
     } 
     &--search:hover {
         background-image: url("../img/search-hover.png");
-        transition: 0.5s;
+        transition: 0.9s;
     } 
     &--search:active {
         opacity: 0.3;
