@@ -35,7 +35,7 @@ $mobile-width:320px;
     &:hover {
         background-color: $main-gray;
         color:  #ffffff;
-        transition: 0.9s;
+        transition: 0.5s;
     }
     &:active {
         background-color: $main-gray;
@@ -162,6 +162,7 @@ $mobile-width:320px;
     } 
     &--search:hover {
         background-image: url("../img/search-hover.png");
+        transition: 0.5s;
     } 
     &--search:active {
         opacity: 0.3;
@@ -309,6 +310,12 @@ $mobile-width:320px;
     &::after {
         content: url("../img/interior.svg.png");
     }  
+    &:active {
+        &::after{
+            opacity: 0.3;
+            transition: 0.3s
+        }
+    }
 }
     
 
@@ -317,10 +324,27 @@ $mobile-width:320px;
     background-color: #56c3b2;
     &::after {
         content: url("../img/toy-svg.png");
-
+    }
+    &:active {
+        &::after{
+            opacity: 0.3;
+            transition: 0.3s
+        }
     }
 }
    
+.hero__link {
+    &:hover {
+        transform: translateY(-7px);
+        transition: 0.5s;
+    }
+    &:active {
+        .hero__link--text{
+        opacity: 0.3;
+        transition: 0.3s}
+    }
+}
+
 
 @media ( max-width: $tablet-width ){
     .hero__wrapper{
@@ -373,7 +397,7 @@ $mobile-width:320px;
         bottom: -110px;
     }     
 }
-.test {
+.section-title-main {
     display: inline-flex;
     align-items: center;
     z-index: 1;
@@ -740,6 +764,13 @@ $mobile-width:320px;
 }
 .mail-text {
     border-bottom: 1px solid $main-green;
+    &:hover {
+        color: $main-green;
+        transition: 0.5s;
+    }
+    &:active {
+        opacity: 0.3;
+    }
 }
 .contacts__content {
     font-size: 17px;
@@ -846,7 +877,7 @@ $mobile-width:320px;
     background-repeat: no-repeat;
     &:hover {
         background-image: url("../img/footer/logo-footer-hover.png");
-        transition: 0.2s;
+        transition: 0.5s;
     }
     &:active {
         background-image: url("../img/footer/logo-footer-active.png");
