@@ -1,0 +1,125 @@
+/* Отзывы */
+.reviews {
+    display: flex;
+}
+    
+.reviews__wrapper {
+    position: relative;
+    font-family: $main-font;
+    max-width: 1050px;
+    margin: 0 auto;
+    background-image: url("../img/review.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    &::after {
+        content: url("../img/zigzag-line-desktop.svg.png");
+        position: absolute;
+        bottom: -90px;
+        max-width: 100%;
+    }
+       
+}
+    
+.review__small-wrap {
+    max-width: 875px;
+    box-sizing: border-box;
+    margin-left: 175px;
+}
+  
+.review__content {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+  
+.review__text {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 17px;
+    line-height: 30px;
+    color: $main-gray;
+}
+  
+.review__author {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.review__nickname {
+    font-size: 17px;
+    line-height: 30px;
+    color: $main-gray;
+}
+
+.review__btn {
+    max-width: 175px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.review__toggle {
+    max-width: 175px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.review__prev {
+    border: none;
+    background-color: #ffffff;
+    min-height: 26px;
+    min-width: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow-left.png);
+    margin-right: 18.5px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.5s;
+    }
+    &:active {
+    opacity: 0.3;   
+    }
+}
+
+.review__next {
+    border: none;
+    background-color: #ffffff;
+    min-height: 26px;
+    min-width: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow-right.png);
+    margin-left: 18.5px;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;;
+        transition: 0.5s;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.reviews__choice {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+@media ( max-width: $tablet-width ) {
+    .reviews__wrapper {
+        max-width: 668px;
+        margin: 0 auto;
+        &::after {
+            max-width: 100%;
+            bottom: -4%;
+            overflow-x: hidden;
+        }       
+    }
+    .review__small-wrap {
+        max-width: 668px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,135 @@
+/* Контакты */
+
+.contacts {
+    margin-top: 170px;
+    margin-bottom: 100px;
+}
+.contacts__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.contacts__small-wrapper{
+    max-width: 875px;
+}   
+.contacts__title {
+    position: relative;
+    display: block;
+    &::before {
+        content: url("../img/flag.png");
+        position: absolute;
+        left: -87.5px;
+    }
+}
+.contacts__info {
+    max-width: 350px;
+    box-sizing: border-box;
+    margin-left: 175px; 
+    position: relative; 
+}
+.contacts__item {
+    font-size: 17px;
+    color: $main-gray;
+    font-family: $main-font;
+    vertical-align: top;
+}
+.contacts__mail {
+    font-size: 17px;
+    color: $main-gray;
+    font-family: $main-font;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.mail-text {
+    border-bottom: 1px solid $main-green;
+    &:hover {
+        color: $main-green;
+        transition: 0.5s;
+    }
+    &:active {
+        opacity: 0.3;
+    }
+}
+.contacts__content {
+    font-size: 17px;
+    color: $main-gray;
+    text-decoration: none;
+    font-style: normal;
+    display: inline-block;
+    margin-left: 25px;
+}
+.contacts__address {
+    max-width: 300px;
+    font-size: 17px;
+    font-family: $main-font;   
+}
+.contact__button {
+    box-sizing: border-box;
+    max-width: 240px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 85PX;
+}
+.contacts__map {
+    max-width: 525px;
+    max-height: 459px;
+    position: absolute;
+    left: 50%;
+    bottom: -270%;
+    box-sizing: border-box;
+}
+
+@media (max-width: $tablet-width) {
+.contacts {
+    margin-top: 100px;
+}
+.contacts__wrapper {
+    max-width: 668px;
+    margin: 0 auto;
+    }
+.contacts__small-wrapper {
+    max-width: 668px;
+    margin: 0 auto;
+    }
+.contacts__info {
+    margin-left: 0;
+    max-width: 100%;
+}
+.contacts__title {
+    position: relative;
+    margin-bottom: 65px;
+    font-size: 43px;
+    &::before {
+        content: "";
+        display: none;
+    }
+    &::after {
+        content: url("../img/flag.png");
+        position: absolute;
+        left: 550px;
+    }
+}
+.contacts__mail {
+    display: inline-block;
+    margin-top: 0;    
+}
+.contacts__address {
+    display: inline-block;
+    align-items: flex-end;
+    margin-left: 0;
+}
+.contacts__content {
+    display: inline-flex;
+}
+.contacts__map {
+    position: absolute;
+    bottom: -310%;
+    align-items: center;
+    max-width: 768px; 
+    left: 0;
+    max-height: 525px;
+}
+.contact__button {
+    margin-top: 471px;
+    margin-left: 212px;
+}
+}

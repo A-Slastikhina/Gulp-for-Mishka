@@ -1,0 +1,198 @@
+$main-color: #000000;
+$main-size:53px;
+$main-weight:bold;
+$main-font: "Open Sans";
+$border-color:#e7e7e7;
+$main-green: #63d1bb;
+$main-gray: #444444;
+$footer-gray: #f1f1f1;
+$tablet-width:768px;
+$mobile-width:320px;
+
+.button {
+    border: 1px solid $main-gray;
+    background-color: #ffffff;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-gray;
+        color:  #ffffff;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: $main-gray;
+        color: #7c7c7c;
+        transition: 0.1s;
+    }
+}
+.section-title {
+    display: inline;
+    font-weight: $main-weight;
+    font-size: $main-size;
+    color:$main-color;
+    font-family: $main-font;
+}
+
+
+/*Товар недели*/
+.week-product {
+    margin-top: 100px;
+}
+ 
+        
+.week-product__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    &::after {
+        content: url("../img/zigzag-line-desktop.svg.png");
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        bottom: -110px;
+    }     
+}
+.section-title-main {
+    display: inline-flex;
+    align-items: center;
+    z-index: 1;
+
+}  
+.week-product__small-wrap {
+    max-width: 875px;
+    margin-left: 175px;
+    box-sizing: border-box;
+}
+    
+    
+.section-title--week-prod {
+    display: inline;
+    box-sizing: border-box;
+    min-width: 175px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-size: 17px;
+    line-height: 16px;
+    color: $main-green;
+    vertical-align: top;
+    padding: 21px;
+    z-index: 1;
+    
+}
+  
+
+.week-product__info {
+    max-width: 700px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-family: $main-font;
+    box-sizing: border-box;
+}
+    
+    
+        
+.week-product__name{
+    display: inline;
+    position: inherit;
+    font-size: $main-size;
+    font-family: $main-font;
+    font-weight: $main-weight;
+    z-index: 1;
+}
+    
+
+.week-product__description {
+    font-family: $main-font;
+    max-width: 300px;
+    font-size: 17px;
+    line-height: 30px;
+    color: $main-gray;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+  
+
+.week-product__char {
+    line-height: 39px;
+    max-width: 300px;
+    border-bottom: 1px solid $border-color;
+}
+ 
+
+.week-product__desc{
+    display: inline-block;
+    width: 98px;
+}
+
+ 
+.week-product__price {
+    margin-top: 110px;
+    color: $main-gray;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+}
+    
+
+.week-product__button {
+    margin-top: 45px;
+    width: 300px;
+}
+ 
+
+.week-product__img {
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+    top: 2%
+
+}
+  
+@media ( max-width: $tablet-width ) {
+.week-product__wrapper {
+    max-width: 668px;
+    &::after {
+        max-width: 100%;
+        overflow-x: hidden;
+}}
+.week-product__small-wrap {
+    max-width: 668px;
+    margin-left: 0px;
+}
+.week-product__name{
+    font-size: 43px;
+    order: 1;
+}
+.section-title--week-prod {
+    order: 2;
+}
+.week-product__img {
+    display: inline;
+    max-width: 334px;
+    left: 334px;
+    top: 17%;
+}
+
+.week-product__info {
+    max-width: 334px;
+    max-height: 415px;
+    box-sizing: border-box;
+}
+.week-product__description {
+    margin-top: 0px;
+    margin-bottom: 34px;
+}
+.week-product__price {
+    margin-top: 37px;
+
+}
+}

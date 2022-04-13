@@ -1,0 +1,145 @@
+$main-color: #000000;
+$main-size:53px;
+$main-weight:bold;
+$main-font: "Open Sans";
+$border-color:#e7e7e7;
+$main-green: #63d1bb;
+$main-gray: #444444;
+$footer-gray: #f1f1f1;
+$tablet-width:768px;
+$mobile-width:320px;
+
+.button {
+    border: 1px solid $main-gray;
+    background-color: #ffffff;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-gray;
+        color:  #ffffff;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: $main-gray;
+        color: #7c7c7c;
+        transition: 0.1s;
+    }
+}
+.section-title {
+    display: inline;
+    font-weight: $main-weight;
+    font-size: $main-size;
+    color:$main-color;
+    font-family: $main-font;
+}
+
+/* Footer */
+
+.footer {
+    background-color: $footer-gray;
+}
+.footer__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer__index-link {
+    background-image: url("../img/logo-footer.png");
+    min-width: 103px;
+    min-height: 35px;
+    background-repeat: no-repeat;
+    &:hover {
+        background-image: url("../img/footer/logo-footer-hover.png");
+        transition: 0.5s;
+    }
+    &:active {
+        background-image: url("../img/footer/logo-footer-active.png");
+    }
+}
+.socials {
+    list-style-type: none;
+    display: inline-flex;
+    min-width: 145px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.socials__icon {
+    &--IG{
+        background-image: url("../img/insta.png");
+        background-repeat: no-repeat;
+        min-width: 25px;
+        min-height: 25px;
+    }
+    &--FB {
+        background-image: url("../img/fb.png");
+        background-repeat: no-repeat;
+        min-width: 20px;
+        min-height: 29px;
+    }
+    &--TW {
+        background-image: url("../img/twitter.png");
+        background-repeat: no-repeat;
+        min-width: 25px;
+        min-height: 25px;
+    }
+    &--IG:hover {
+        cursor: pointer;
+        background-image: url("../img/footer/insta-hover.png");
+        transition: 0.5s;
+    }
+    &--IG:active {
+        opacity: 0.3;
+    }
+    &--FB:hover {
+        cursor: pointer;
+        background-image: url("../img/footer/fb-hover.png");
+        transition: 0.5s;
+    }
+    &--FB:active {
+        opacity: 0.3;
+    }
+    &--TW:hover {
+        cursor: pointer;
+        background-image: url("../img/footer/twitter-hover.png");
+        transition: 0.5s;
+    }
+    &--TW:active {
+        opacity: 0.3;
+    }
+}
+
+.footer__copyright {
+font-family: $main-font;
+font-weight: $main-weight;
+text-decoration: none;
+color: #000000;
+position: relative;
+max-width: 182px;
+box-sizing: border-box;
+margin-right: 60px;
+
+&::after {
+    content: url("../img/htmlacademy.png");
+    min-width: 27px;
+    min-height: 35px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -50%;
+}
+&:hover::after {
+    content: url("../img/footer/htmlacademy-hover.png");
+}
+&:active {
+    opacity: 0.3;
+    transition: 0.5s;
+}
+}

@@ -1,0 +1,202 @@
+$main-color: #000000;
+$main-size:53px;
+$main-weight:bold;
+$main-font: "Open Sans";
+$border-color:#e7e7e7;
+$main-green: #63d1bb;
+$main-gray: #444444;
+$footer-gray: #f1f1f1;
+$tablet-width:768px;
+$mobile-width:320px;
+
+.button {
+    border: 1px solid $main-gray;
+    background-color: #ffffff;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-gray;
+        color:  #ffffff;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: $main-gray;
+        color: #7c7c7c;
+        transition: 0.1s;
+    }
+}
+.section-title {
+    display: inline;
+    font-weight: $main-weight;
+    font-size: $main-size;
+    color:$main-color;
+    font-family: $main-font;
+}
+@media ( max-width: $tablet-width ){
+    .section-title{
+        font-size: 43px;
+    }
+}
+
+%specials-header-separ{
+    list-style-type: none;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset -1px 0 0 0  $border-color;
+}
+
+/*Шапка*/
+
+.header__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+.border-wrap {
+    box-sizing: border-box;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.page-header {
+    background-color: #ffffff;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: $main-font;
+    & a { 
+        text-decoration: none;
+        color: #000000;
+    } 
+}
+.border-wrap {
+    border-bottom:1px solid $border-color;
+}
+
+.nav__list {
+    padding-left: 0%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}   
+.site-list__item  {
+    list-style-type: none;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    &--basket {
+        list-style-type: none;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding-right: 45px;
+        padding-left: 45px;
+        display: flex;
+        align-items: center;
+        box-shadow: inset 1px 0 0 0  $border-color;
+    }
+    &--search  {
+        list-style-type: none;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        padding-left: 45px;
+        display: flex;
+        align-items: center;
+        box-shadow: inset 1px 0 0 0  $border-color;
+    }
+    &--catalog {
+        @extend %specials-header-separ;
+        padding-right: 20px;
+    }   
+}
+
+
+.nav__item {
+    text-decoration: none;
+    color: #000000;
+&:hover {
+    opacity: 0.66;
+    transition: 0.5s;
+}
+&:active {
+    opacity: 0.3;
+    }
+    &--basket {
+        list-style-type: none;
+        background-image: url("../img/cart.svg.png");
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 18px;
+    }
+    &--basket:hover {
+        background-image: url("../img/cart-hover.png");
+        transition: 0.5s;
+    }
+    &--basket:active {
+        opacity: 0.3;
+    }
+    &--search {
+        list-style-type: none;
+        background-repeat: no-repeat;
+        background-image: url("../img/search.svg.png");
+        width: 21px;
+        height: 18px; 
+    } 
+    &--search:hover {
+        background-image: url("../img/search-hover.png");
+        transition: 0.5s;
+    } 
+    &--search:active {
+        opacity: 0.3;
+    }  
+    &--index {
+        width: 149px;
+        height: 72px;
+        background-image: url("../img/mishka-logo-desktop.png");
+        background-repeat: no-repeat;
+        margin-left: 19px;  
+    }
+    &--index:hover {
+    opacity: 0.6;        
+    transition: 0.5s;
+    }
+    &--index:active {
+    opacity: 0.3;
+    }
+
+}
+
+@media (max-width: $tablet-width) {
+    .border-wrap {
+        max-width: 668px;
+        margin: 0 auto;
+    }
+    .header__wrapper {
+        max-width: 668px;
+        margin: 0 auto;
+    }
+    .nav__list {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+     
+    .site-list__item--catalog{
+        display: none;
+    }
+    .hidden {
+        display: none;
+    }
+    .nav__item--index {
+        background-image: url("../img/mishka-logo-tablet.png");
+        height: 46px;
+        width: 113px;
+        align-items: center;
+    }      
+}
