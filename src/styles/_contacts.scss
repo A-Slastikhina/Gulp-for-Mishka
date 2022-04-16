@@ -70,12 +70,16 @@
     padding-right: 40px;
     margin-top: 85PX;
 }
+.contacts__frame-map {
+    width: 100%;
+    display: flex;
+}
 .contacts__map {
-    max-width: 525px;
+    max-width: 100%;
     max-height: 459px;
     position: absolute;
     left: 50%;
-    bottom: -270%;
+    bottom: -265%;
     box-sizing: border-box;
 }
 
@@ -108,7 +112,7 @@
     &::after {
         content: url("../img/flag.png");
         position: absolute;
-        left: 550px;
+        left: 430px;
         top: -14px
     }
 }
@@ -128,8 +132,6 @@
 .contacts__map {
     position: absolute;
     bottom: -300%;
-    align-items: center;
-    max-width: 768px; 
     left: 0;
     max-height: 525px;
 }
@@ -137,4 +139,28 @@
     margin-top: 471px;
     margin-left: 212px;
 }
+}
+$mobile-width: 320px;
+@media (max-width: $mobile-width) {
+    .contacts__map {
+        width: 320px;
+    }
+        .contacts__title {
+            position: relative;
+            margin-bottom: 65px;
+            font-size: 43px;
+            margin-left: 0px;
+            &::before {
+                content: "";
+                display: none;
+            }
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+        .contact__button {
+            margin-top: auto;
+            margin-left: 0;
+        }
 }

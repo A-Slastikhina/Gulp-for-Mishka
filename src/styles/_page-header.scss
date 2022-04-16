@@ -9,6 +9,9 @@ $footer-gray: #f1f1f1;
 $tablet-width:768px;
 $mobile-width:320px;
 
+.header__menu-mobile {
+    display: none;
+}
 .button {
     border: 1px solid $main-gray;
     background-color: #ffffff;
@@ -62,6 +65,7 @@ $mobile-width:320px;
     box-sizing: border-box;
     max-width: 1150px;
     margin: 0 auto;
+    border-bottom:1px solid $border-color;
 }
 .page-header {
     background-color: #ffffff;
@@ -72,9 +76,6 @@ $mobile-width:320px;
         text-decoration: none;
         color: #000000;
     } 
-}
-.border-wrap {
-    border-bottom:1px solid $border-color;
 }
 
 .nav__list {
@@ -199,4 +200,50 @@ $mobile-width:320px;
         width: 113px;
         align-items: center;
     }      
+}
+
+$mobile-width: 320px;
+@media (max-width: $mobile-width){
+    .header__wrapper {
+        max-width: 100%;
+    } 
+    .nav__list {
+        justify-content: center;
+    }
+    .site-list__item {
+    &--catalog {
+        display: none;
+    }
+    &--search {
+        display: none;
+    }
+    &--basket {
+        display: none;
+    }
+    & span {
+        display: none;
+    }
+}
+    .hidden {
+        display: none;
+    }
+    .nav {
+        position: relative;
+    }
+    .nav__item--index {
+        display: flex;
+        background-image: url("../img/mobile/mishka-logo-mobile.png");
+    }
+    .header__menu-mobile {
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: 2;
+        width: 20px;
+        height: 14px;
+        background-color: #000000;
+        display: block;
+
+
+    }
 }

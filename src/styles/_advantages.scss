@@ -31,7 +31,7 @@ $mobile-width:320px;
         transition: 0.1s;
     }
 }
-.section-title {
+.advantages__title {
     display: inline;
     font-weight: $main-weight;
     font-size: $main-size;
@@ -95,5 +95,12 @@ $mobile-width:320px;
         max-width: 300px;
         margin-bottom: 60px;
         font-family: $main-font;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .advantages__title {
+        font-size: 25px;
+        line-height: 30px;
     }
 }

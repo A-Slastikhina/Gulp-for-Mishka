@@ -92,7 +92,6 @@ $mobile-width:320px;
     max-width: 700px;
     display: inline-block;
     position: relative;
-    z-index: 1;
     font-family: $main-font;
     box-sizing: border-box;
 }
@@ -106,6 +105,8 @@ $mobile-width:320px;
     font-family: $main-font;
     font-weight: $main-weight;
     z-index: 1;
+    position: relative;
+
 }
     
 
@@ -151,9 +152,9 @@ $mobile-width:320px;
 
 .week-product__img {
     position: absolute;
-    left: 50%;
+    left: 116%;
     z-index: 0;
-    top: 2%
+    top: -12%
 
 }
   
@@ -195,4 +196,62 @@ $mobile-width:320px;
     margin-top: 37px;
 
 }
+}
+$mobile-width: 320px;
+@media (max-width: $mobile-width) {
+    .week-product {
+        max-width: $mobile-width;
+        
+    }
+    .week-product__wrapper {
+        max-width: 260px;
+        &::after {
+            max-width: 100%;
+            overflow-x: hidden;
+            content: url("../img/mobile/zigzag-line-mobi.png");
+            bottom: -70px;
+        }
+    }
+    .section-title-main {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .week-product__name {
+        font-size: 25px;
+        line-height: 30px;
+        order: 1;
+        margin-top: 33px;
+
+    }
+    .section-title--week-prod {
+        order: 2;
+        font-size: 17px;
+        line-height: 20px;
+        padding-left: 0;
+        min-width: auto;
+        & br {
+            display: none;
+        }
+    }
+    .week-product__img {
+        display: block;
+        max-width: 260px;
+        position: static; 
+        margin-top: 25px;
+    }
+    .week-product__description {
+        max-width:260px;
+    }
+    .week-product__char {
+        max-width: 260px;
+    }
+    .week-product__button {
+        max-width: 260px;
+    }
+  
+    .week-product__price {
+        width: auto;
+    }
 }

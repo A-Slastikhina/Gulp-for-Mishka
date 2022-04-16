@@ -192,7 +192,7 @@ $mobile-width:320px;
 .hero__list {
     max-width: 668px;
     bottom: 0;
-    top: 338px;
+    top: 85px;
     &::after { 
         max-width: 100%;}     
 }
@@ -202,4 +202,33 @@ $mobile-width:320px;
     padding-left: 0px  
     }
 }
+}
+
+$mobile-width: 320px;
+@media (max-width: $mobile-width) {
+    .hero {
+        height: auto;
+    }
+   
+    .hero__title {
+        font-size: 27px;
+        line-height: 30px;
+        margin-top:0px;
+        padding-top: 110px;
+    }
+    .hero-nav__list {
+        display: none;
+      
+    }
+    .hero__list {
+        display: block;
+        max-width: $mobile-width;
+        top: 120px;
+        &::after {
+            display: none;
+        }
+    }
+    .hero__link {
+        max-height: 103px;
+    }
 }
