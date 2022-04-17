@@ -143,3 +143,32 @@ margin-right: 60px;
     transition: 0.5s;
 }
 }
+$mobile-width: 320px;
+@media (max-width: $mobile-width){
+    .footer__wrapper {
+        max-width: 260px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+    .footer__index-link {
+        display: none;
+    }
+    .socials  {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        border-bottom: 1px solid $border-color;
+    }
+    .footer__copyright {
+        display: block;
+        align-items: baseline;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        &::after {
+            right: 0%;
+        }
+    }
+
+}
