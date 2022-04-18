@@ -99,7 +99,7 @@ $mobile-width:320px;
     box-sizing: border-box;
     position: relative;
     padding-left: 0;
-    bottom: -488px;
+    bottom: -399px;
     display: flex;
     list-style: none;
     &::after {
@@ -172,44 +172,56 @@ $mobile-width:320px;
 
 
 @media ( max-width: $tablet-width ){
+    .hero {
+        width: 100%;
+    }
     .hero__wrapper{
-    max-width: 668px;
-    margin: 0 auto;
+    max-width: 100%;
+    
     }
     
 .hero__title {
     font-size: 43px;
 }
-.hero {
-    margin: 0 auto;
-}
+
    
 .hero-nav__list {
-    max-width: 668px;
+    max-width: 87%;
 }
 
     
 .hero__list {
-    max-width: 668px;
-    bottom: 0;
-    top: 312px;
+    max-width: 100%;
+    bottom: -312px;    top: 312px;
     &::after { 
         max-width: 100%;}     
 }
-      
+.hero__item{
+    &--interior {
+        width: 50%;
+        padding: 4.2%;
+    }
+    &--toys {
+        width: 50%;
+    }
+}    
 .site-list__item {  
     &--bottom-delivery{
     padding-left: 0px  
     }
 }
+
 }
 
 $mobile-width: 320px;
 @media (max-width: $mobile-width) {
     .hero {
         height: auto;
+        width: 100%;
     }
    
+   .hero__wrapper {
+   }
     .hero__title {
         font-size: 27px;
         line-height: 30px;
@@ -221,11 +233,21 @@ $mobile-width: 320px;
       
     }
     .hero__list {
+        
         display: block;
         max-width: $mobile-width;
         top: 120px;
         &::after {
             display: none;
+        }
+    }
+
+    .hero__item {
+        &--interior{
+            width: 100%;
+        }
+        &--toys {
+            width: 100%;
         }
     }
     .hero__link {

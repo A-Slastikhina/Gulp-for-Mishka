@@ -125,17 +125,20 @@ $mobile-width:320px;
 }
 
 @media ( max-width: $tablet-width ) {
+    .reviews {
+        width: 100%;
+    }
     .reviews__wrapper {
-        max-width: 668px;
+        max-width: 87%;
         margin: 0 auto;
         &::after {
             max-width: 100%;
-            bottom: -4%;
+            bottom: 3%;
             overflow-x: hidden;
         }       
     }
     .review__small-wrap {
-        max-width: 668px;
+        max-width: 87%;
         margin: 0 auto;
     }
 }

@@ -143,6 +143,14 @@ margin-right: 60px;
     transition: 0.5s;
 }
 }
+
+$tablet-width: 768px;
+@media ( max-width: $tablet-width ){
+.footer__wrapper {
+    flex-wrap: wrap;
+}
+}
+
 $mobile-width: 320px;
 @media (max-width: $mobile-width){
     .footer__wrapper {

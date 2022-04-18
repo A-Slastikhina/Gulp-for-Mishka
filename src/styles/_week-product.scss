@@ -159,14 +159,17 @@ $mobile-width:320px;
 }
   
 @media ( max-width: $tablet-width ) {
+.week-product {
+    width: 100%;
+}
 .week-product__wrapper {
-    max-width: 668px;
+    width: 87%;
     &::after {
-        max-width: 100%;
+        max-width: 87%;
         overflow-x: hidden;
 }}
 .week-product__small-wrap {
-    max-width: 668px;
+    max-width: 87%;
     margin-left: 0px;
 }
 .week-product__name{
@@ -178,9 +181,10 @@ $mobile-width:320px;
 }
 .week-product__img {
     display: inline;
-    max-width: 334px;
+    max-width: 50%;
     left: 334px;
     top: 17%;
+    position: static;
 }
 
 .week-product__info {
