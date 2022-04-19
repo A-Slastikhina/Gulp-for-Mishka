@@ -141,7 +141,11 @@ $mobile-width:320px;
         max-width: 87%;
         margin: 0 auto;
     }
+    .review__content {
+        flex-wrap: wrap;
+    }
 }
+
 @media (max-width: $mobile-width) {
     .reviews__wrapper {
         max-width: 260px;

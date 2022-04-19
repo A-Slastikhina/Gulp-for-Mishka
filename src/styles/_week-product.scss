@@ -178,10 +178,13 @@ $mobile-width:320px;
 }
 .section-title--week-prod {
     order: 2;
+    max-width: 22.8%;
+        min-width: 10px;
+        padding: 2.7%;
 }
 .week-product__img {
     display: inline;
-    max-width: 50%;
+    max-width: 100%;
     left: 334px;
     top: 17%;
     position: static;
@@ -198,7 +201,9 @@ $mobile-width:320px;
 }
 .week-product__price {
     margin-top: 37px;
-
+}
+.week-product__button {
+    width: 100%;
 }
 }
 $mobile-width: 320px;
@@ -234,10 +239,11 @@ $mobile-width: 320px;
         font-size: 17px;
         line-height: 20px;
         padding-left: 0;
-        min-width: auto;
+
         & br {
             display: none;
         }
+        
     }
     .week-product__img {
         display: block;

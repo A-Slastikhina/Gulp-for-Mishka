@@ -146,9 +146,21 @@ margin-right: 60px;
 
 $tablet-width: 768px;
 @media ( max-width: $tablet-width ){
+.footer {
+    width: 100%;
+}
 .footer__wrapper {
+    width: 87%;
     flex-wrap: wrap;
 }
+.footer__copyright {
+    margin-top: 10px;
+}
+.socials {
+align-items: flex-end;}
+.footer__index-link {
+align-items: flex-end;}
+
 }
 
 $mobile-width: 320px;

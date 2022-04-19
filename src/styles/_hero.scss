@@ -186,7 +186,9 @@ $mobile-width:320px;
 
    
 .hero-nav__list {
-    max-width: 87%;
+    max-width: 100%;
+    flex-wrap: wrap;
+justify-content: center;
 }
 
     
@@ -205,9 +207,14 @@ $mobile-width:320px;
         width: 50%;
     }
 }    
-.site-list__item {  
+.site-list__item { 
+    &--bottom {
+    margin-right: 10px;
+    padding-right: 0;
+    } 
     &--bottom-delivery{
-    padding-left: 0px  
+    padding-left: 0px;
+    padding-right: 0;
     }
 }
 
