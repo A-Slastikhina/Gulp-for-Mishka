@@ -11,15 +11,14 @@
 <title>Mishka</title>
 </head>
 <body>
- <script src="js/main.min.js"></script> 
+ 
 <header class="page-header">
 <div class="border-wrap">
         <div class="header__wrapper">
-                <div class="header__menu-mobile">
-                    <button class="button--open"></button>
-                </div>
-                <div class="mobile__menu"></div>
-            <nav class="nav">
+                
+                    <button class="burger modalClose" type="button"></button>
+            
+            <nav class="navMain  navMain--open">
                     <ul class="nav__list site-list">
                         <li class="site-list__item--catalog">
                         <a class="nav__item" href="#">Каталог товаров</a>
@@ -39,9 +38,7 @@
 
                     <li class="site-list__item--basket">
                         <a class="nav__item--basket" href="#" alt="Корзина"></a>
-                    </li>
-
-                    <li class="site-list__item hidden--span"><span>Корзина: пока пуста</span></li>                   
+                    </li>                
                 </ul>
                 
             </nav>
@@ -208,6 +205,6 @@
                 <a class="footer__copyright" href="https://htmlacademy.ru/">Разработано</a>         
     </div>
     </footer>
-
+    <script src="js/main.min.js"></script> 
 </body>
 </html>

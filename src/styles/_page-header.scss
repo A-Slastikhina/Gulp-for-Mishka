@@ -191,7 +191,7 @@ $mobile-width:320px;
        width: 87%;
        margin: 0;
     }
-   .nav {
+   .navMain {
        width: 87%;
        margin: 0;
    }
@@ -215,9 +215,7 @@ $mobile-width:320px;
         }
         &--basket {
             padding-left: 10%;
-            &::after {
-                display: none;
-            }
+          
         }
     }
     .hidden {
@@ -254,6 +252,33 @@ $mobile-width: 320px;
     .header__wrapper {
         width: 100%;
     }
+
+    
+   
+    .burger {
+        background-image: url('../img/mobile/burger.png');
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        border: none;
+        background-color: #ffffff;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .modalClose   {
+        background-image: url('../img/mobile/menu-close.png');
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        border: none;
+        background-color: #ffffff;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .nav__list {
     display: flex;  
     flex-direction: column;
@@ -310,16 +335,15 @@ $mobile-width: 320px;
             font-size: 17px;
         }
     }
-    & span {
-        display: none;  
-    }
+
 }
-    .hidden--span {
-        display: none;
-    }
-    .nav {
+    .navMain {
         position: relative;
         width: 100%;
+        &--open {
+            display: none;
+        }
+       
 
     }
   
@@ -333,17 +357,5 @@ $mobile-width: 320px;
         &--basket {
             width: 28px;
         }
-    }
-    .header__menu-mobile {
-        position: absolute;
-        top:0;
-        right: 0;
-        z-index: 2;
-        width: 20px;
-        height: 14px;
-        background-color: #000000;
-        display: block;
-
-
-    }
+    }  
 }
