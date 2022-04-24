@@ -51,7 +51,7 @@ $mobile-width:320px;
     background-color: #f9f9f9;
     height: 90vh;
     background-image: url("../img/hero-desktop.jpg");
-    background-size: cover;
+    background-size: auto;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -223,12 +223,11 @@ justify-content: center;
 $mobile-width: 320px;
 @media (max-width: $mobile-width) {
     .hero {
+        background-size: cover;
         height: auto;
         width: 100%;
     }
    
-   .hero__wrapper {
-   }
     .hero__title {
         font-size: 27px;
         line-height: 30px;

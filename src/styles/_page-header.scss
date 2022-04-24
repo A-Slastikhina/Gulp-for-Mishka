@@ -175,6 +175,12 @@ $mobile-width:320px;
     }
 
 }
+.burger {
+    display: none;
+}
+.burger--open {
+    display: none;
+}
 
 @media (max-width: $tablet-width) {
     .page-header {
@@ -191,7 +197,13 @@ $mobile-width:320px;
        width: 87%;
        margin: 0;
     }
-   .navMain {
+    .burger {
+        display: none;
+    }
+    .burger--open {
+        display: none;
+    }
+   .nav {
        width: 87%;
        margin: 0;
    }
@@ -243,6 +255,7 @@ $mobile-width:320px;
 
 $mobile-width: 320px;
 @media (max-width: $mobile-width){  
+   
     .page-header {
         width: 100%;
     }
@@ -253,34 +266,51 @@ $mobile-width: 320px;
         width: 100%;
     }
 
-    
+    .nav {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        min-height: 50px;
+        align-items: center;
+        
+        &--closed {
+            display: none;
+        }
+    }
    
     .burger {
+        display: flex;
         background-image: url('../img/mobile/burger.png');
         width: 20px;
-        height: 20px;
+        height: 14px;
         background-repeat: no-repeat;
         border: none;
         background-color: #ffffff;
+        align-items: center;
         &:hover {
             cursor: pointer;
         }
+        &--open {
+            display: flex;
+        }
+        
     }
-
-    /*.modalClose   {
+    .burger--close  {
+        display: flex;
         background-image: url('../img/mobile/menu-close.png');
         width: 20px;
         height: 20px;
         background-repeat: no-repeat;
         border: none;
         background-color: #ffffff;
-        &:hover {
-            cursor: pointer;
-        }
-    }*/
+        position: absolute;
+        left: 76%;
+        top: 5.5%;
+    }
 
     .nav__list {
-    display: flex;  
     flex-direction: column;
     text-align: center; 
     width: 100%;
@@ -337,25 +367,28 @@ $mobile-width: 320px;
     }
 
 }
-    .navMain {
-        position: relative;
-        width: 100%;
-        &--open {
-            display: none;
-        }
-       
-
-    }
   
+
     .nav__item{
         &--index {
         width: 86px;
         display: flex;
         background-image: url("../img/mobile/mishka-logo-mobile.png");
-
         }
         &--basket {
             width: 28px;
         }
-    }  
+        &--test {
+        box-sizing: border-box;
+        background-image: url("../img/mobile/mishka-logo-mobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 73px;
+        height: 35px;
+        margin-right: 30%;  
+        }
+    } 
+    .not-seen{
+        display: none;
+    } 
 }

@@ -91,8 +91,8 @@ $mobile-width:320px;
     }
     .advantages__item {
         
-        margin-right: 30px;
-        max-width: 300px;
+        margin-right: 4%;
+        max-width: 40%;
         margin-bottom: 60px;
         font-family: $main-font;
     }
@@ -113,6 +113,7 @@ $mobile-width:320px;
        
     }
     .advantages__item {
+        max-width: 100%;
         margin-bottom: 30px;
     }
 }
