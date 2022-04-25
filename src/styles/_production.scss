@@ -1,0 +1,58 @@
+$main-color: #000000;
+$main-size:53px;
+$main-weight:bold;
+$main-font: "Open Sans";
+$border-color:#e7e7e7;
+$main-green: #63d1bb;
+$main-gray: #444444;
+$footer-gray: #f1f1f1;
+$tablet-width:768px;
+$mobile-width:320px;
+
+.header__menu-mobile {
+    display: none;
+}
+.button {
+    border: 1px solid $main-gray;
+    background-color: #ffffff;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-gray;
+        color:  #ffffff;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: $main-gray;
+        color: #7c7c7c;
+        transition: 0.1s;
+    }
+}
+
+.production__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.production__video {
+    background-image: url('../img/catalog/mobile/video.png') ;
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-width: 260px;
+    min-height: 149px;
+    position: relative;
+    &::after {
+        content:url('../img/catalog/play.png');
+        position: absolute;
+        right: 33%;
+        bottom: 24%;
+    }
+}
+
