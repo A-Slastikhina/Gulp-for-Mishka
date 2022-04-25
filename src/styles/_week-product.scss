@@ -42,7 +42,7 @@ $mobile-width:320px;
 
 /*Товар недели*/
 .week-product {
-    margin-top: 100px;
+    margin-top: 50px;
 }
  
         
@@ -165,7 +165,7 @@ $mobile-width:320px;
 .week-product__wrapper {
     width: 87%;
     &::after {
-        max-width: 87%;
+        max-width: 100%;
         overflow-x: hidden;
 }}
 .week-product__small-wrap {
@@ -176,11 +176,15 @@ $mobile-width:320px;
     font-size: 43px;
     order: 1;
 }
+.section-title-main {
+    width: 100%;
+    justify-content: space-between;
+}
 .section-title--week-prod {
     order: 2;
     max-width: 22.8%;
-        min-width: 10px;
-        padding: 2.7%;
+    min-width: 10px;
+    padding: 2.7%;
 }
 .week-product__img {
     display: inline;
@@ -194,6 +198,7 @@ $mobile-width:320px;
     max-width: 334px;
     max-height: 415px;
     box-sizing: border-box;
+    margin-top: 50px;
 }
 .week-product__description {
     margin-top: 0px;
@@ -209,6 +214,7 @@ $mobile-width:320px;
 $mobile-width: 320px;
 @media (max-width: $mobile-width) {
     .week-product {
+        margin-top: 150px;
         max-width: $mobile-width;
         
     }

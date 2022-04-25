@@ -49,9 +49,8 @@ $mobile-width:320px;
 .hero {
     position: relative;
     background-color: #f9f9f9;
-    height: 90vh;
     background-image: url("../img/hero-desktop.jpg");
-    background-size: auto;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -99,9 +98,9 @@ $mobile-width:320px;
     box-sizing: border-box;
     position: relative;
     padding-left: 0;
-    bottom: -399px;
     display: flex;
     list-style: none;
+    margin-top: 350px;
     &::after {
         position: absolute;
         bottom: -10%;
@@ -194,7 +193,7 @@ justify-content: center;
     
 .hero__list {
     max-width: 100%;
-    bottom: -312px;    top: 312px;
+
     &::after { 
         max-width: 100%;}     
 }
@@ -205,6 +204,7 @@ justify-content: center;
     }
     &--toys {
         width: 50%;
+        padding: 4.2%;
     }
 }    
 .site-list__item { 
