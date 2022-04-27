@@ -81,18 +81,17 @@ $mobile-width:320px;
 }
  @media (max-width: $tablet-width) {
     .advantages__wrapper {
-        max-width: 668px;
+        max-width: 87%;
         margin: 0 auto;
     }
     .advantages__small-wrap {
-        max-width: 100%;
         box-sizing: border-box;
         margin-left: 0;
     }
     .advantages__item {
         
         margin-right: 4%;
-        max-width: 40%;
+        max-width: 45%;
         margin-bottom: 60px;
         font-family: $main-font;
     }

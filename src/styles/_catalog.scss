@@ -8,6 +8,7 @@ $main-gray: #444444;
 $footer-gray: #f1f1f1;
 $tablet-width:768px;
 $mobile-width:320px;
+$mobile-fsize:17px;
 
 .header__menu-mobile {
     display: none;
@@ -46,7 +47,7 @@ $mobile-width:320px;
 }
 
 .catalog__wrapper {
-    max-width: 1050px;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -55,19 +56,76 @@ $mobile-width:320px;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: center;
 }
-/*.catalog__title {
+.catalog__title {
     font-weight: $main-weight;
-    font-size: $main-size;
+    font-size: 27px;
     color:$main-color;
     font-family: $main-font;
-} */
+    padding-top: 76px;
+    padding-bottom:81px;
+    text-align: center;
+} 
 
+.product-item {
+    width: 81.25%; /*примерно 30% для десктопа*/
+    margin-top: 30px;
+   
+    border: 1px solid $border-color;
+}
 .product-item__link {
     text-decoration: none;
     &:hover{
         cursor: pointer;
     }
 }
+.product-item__photo {
+    max-width: 100%;
+}
+.product-item__name {
+    font-weight: $main-weight;
+    font-size: $mobile-fsize;
+    color:$main-color;
+    font-family: $main-font;
+    padding-left: 9.37%;
+    padding-right: 9.37%;
+    margin-top: 30px;
+    margin-bottom: 17px;
+}
+.product-item__char {
+    font-size: 13px;
+    color:$main-gray;
+    font-family: $main-font;
+    margin-left: 9.37%;
+    margin-right: 9.37%;
+    padding-bottom: 17px;
+    width: 81.25%;
+    border-bottom: 1px solid $border-color;
+}
+.product-item__price {
+    font-weight: $main-weight;
+    font-size: 15px;
+    color:$main-color;
+    font-family: $main-font;
+    padding-left: 9.37%;
+    padding-right: 9.37%;
+    margin-top: 29px;
+    margin-bottom: 29px;
+    display: inline-flex;
+}
+.product-item__buy {
+    display: inline-flex;
+    background-image: url("../img/cart.svg.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color:#ffffff;
+    vertical-align: middle;
+    margin-left: 36%;
+
+}
+
+
 

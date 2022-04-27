@@ -187,6 +187,7 @@ $mobile-width:320px;
     .page-header {
         width: 100%;
         margin: 0;
+        border-bottom: 1px solid $border-color;
     }
     .border-wrap {
         width: 87%;
@@ -223,6 +224,7 @@ $mobile-width:320px;
             width: 42%;
         }
         &--search {
+            margin-left: 45%;
             width: 24%;
             padding-left: 10%;
         }
@@ -242,6 +244,7 @@ $mobile-width:320px;
             margin-left: 0;
         } 
         &--basket {
+            width: 40px;
             display: flex;
             justify-content: space-between;
         }
