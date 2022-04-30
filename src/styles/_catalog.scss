@@ -10,6 +10,7 @@ $tablet-width:768px;
 $mobile-width:320px;
 $mobile-fsize:17px;
 
+
 .header__menu-mobile {
     display: none;
 }
@@ -58,7 +59,7 @@ $mobile-fsize:17px;
     list-style-type: none;
     justify-content: center;
 }
-.catalog__title {
+.intro__title {
     font-weight: $main-weight;
     font-size: 27px;
     color:$main-color;
@@ -127,5 +128,28 @@ $mobile-fsize:17px;
 
 }
 
+@media ( min-width: 321px ) {
+    .intro{
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom: -10%;
+            content: url(../img/zigzag-fill-desktop.svg.png);
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+    }
+    .intro__title {
+        font-size: 43px;
+        line-height: 50px;
+    }
 
+    .product-item__photo {
+        max-width: 50%;
+    }
+    .testy {
+        width: 50%;
+    display: inline-block;
+    }
+}
 
