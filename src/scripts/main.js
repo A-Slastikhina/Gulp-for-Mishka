@@ -34,3 +34,14 @@ burger.addEventListener ('click', function (){
     }
 })
 
+var BuyButton = document.querySelector ('product-item__buy')
+var toBusket = document.querySelector ('add-basket')
+
+BuyButton.addEventListener('click', function(){
+if (toBusket.classList.contains('add-closed')) {
+    toBusket.classList.remove('add-closed')
+}
+ else (
+     toBusket.classList.add('add-closed')
+ )
+})
