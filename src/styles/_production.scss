@@ -101,3 +101,34 @@ $mobile-fsize:17px;
     margin-bottom: 29px;
     color: $main-gray;
 }
+
+@media ( min-width: 321px ) {
+.production__wrapper  {
+    display: flex;
+    flex-direction: column;
+}
+.production__title {
+    order: 2;
+    &::before {
+        padding-top: 1px;
+    }
+}
+.production__video {
+    width: 100%;
+    background-size: cover;
+    order: 1;
+    background-image: url('../img/catalog/tablet/video-tablet.png');
+    height: 312px;
+    &::after {
+        right: 38.25%;
+        bottom: 32%;
+    }
+}
+
+.production__description {
+    order: 3;
+}
+.production__button {
+    order: 4;
+}
+}

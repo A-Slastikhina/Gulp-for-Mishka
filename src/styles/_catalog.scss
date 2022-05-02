@@ -124,7 +124,7 @@ $mobile-fsize:17px;
     border: none;
     background-color:#ffffff;
     vertical-align: middle;
-    margin-left: 36%;
+    margin-left: 31%;
 
 }
 
@@ -143,13 +143,36 @@ $mobile-fsize:17px;
         font-size: 43px;
         line-height: 50px;
     }
-
-    .product-item__photo {
-        max-width: 50%;
+    .product-item {
+        display: flex;
     }
-    .testy {
+    .product-item__photo {
+        max-width: 100%;
+    }
+    .product-item__text-part {
         width: 50%;
-    display: inline-block;
+        box-sizing: border-box;
+    }
+    .product-item__name {
+        margin-top: 29px;
+        margin-bottom: 19px;
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    .product-item__char {
+        padding-bottom: 54%;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .product-item__price {
+        margin-top: 27px;
+        padding-right: 0;
+    }
+    .product-item__buy {
+        margin-left: 35.6%;
+
     }
 }
 
