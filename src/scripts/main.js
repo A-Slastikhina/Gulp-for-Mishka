@@ -34,14 +34,19 @@ burger.addEventListener ('click', function (){
     }
 })
 
-var BuyButton = document.querySelector ('product-item__buy')
-var toBusket = document.querySelector ('add-basket')
+var BuyButtons = document.querySelectorAll('.product-item__buy');
+var toBusket = document.querySelector ('.add-basket');
+var modalBcg = document.querySelector ('.add-basket__bcg');
 
-BuyButton.addEventListener('click', function(){
-if (toBusket.classList.contains('add-closed')) {
-    toBusket.classList.remove('add-closed')
-}
- else (
-     toBusket.classList.add('add-closed')
- )
-})
+BuyButtons.forEach(b=>b.addEventListener ('click', function() {
+    if (toBusket.classList.contains('add-closed'))
+    {
+        modalBcg.classList.remove('add-closed'),
+        toBusket.classList.remove('add-closed');
+    }
+         
+}))
+
+    modalBcg.addEventListener ('click', function () {
+    toBusket.classList.add('add-closed'),
+    modalBcg.classList.add('add-closed');})

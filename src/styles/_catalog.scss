@@ -115,7 +115,8 @@ $mobile-fsize:17px;
     margin-bottom: 29px;
     display: inline-flex;
 }
-.product-item__buy {
+
+%prod-item-set {
     display: inline-flex;
     background-image: url("../img/cart.svg.png");
     background-repeat: no-repeat;
@@ -126,26 +127,48 @@ $mobile-fsize:17px;
     vertical-align: middle;
     margin-left: 31%;
     cursor: pointer;
-
 }
-
+.product-item__buy {
+        @extend %prod-item-set;
+}
+.add-basket__bcg {
+    width: 100%;
+    height: 100vh;  
+    opacity: 0.9;
+    z-index: 4;
+    background-color: #ffffff;
+    width: 100%;
+    height: 315vh;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0%;
+}
 .add-basket {
+    box-sizing: border-box;
     width: 100%;
     font-family: $main-font;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid $border-color;
-    box-shadow: 0px 8px 15px 0px $border-color;
+    background-color: #ffffff;
+    z-index: 5;
+    
+    position: absolute;
+    top: 100%;
 
 }
 .add-basket__wrapper {
+    box-sizing: border-box;
+    background-color: #ffffff;
     padding-top: 36px;
-    width: 81.25%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid $border-color;
+    box-shadow: 0px 8px 15px 0px $border-color;
+    z-index: 5;
 }
 .add-basket__title {
     color:$main-color;
@@ -169,7 +192,7 @@ margin-bottom: 28px;
 
 }
 .add-basket__sizes-list {
-    width: 100%;
+   width: 81.25%;
     display: flex;
     text-transform: uppercase;
     list-style-type: none;
@@ -177,14 +200,21 @@ margin-bottom: 28px;
     margin-bottom: 31px;
 }
 .add-basket__sizes-item {
+    text-transform: uppercase;
     box-sizing: border-box;
     padding-left: 11%;
     padding-right: 11%;
     padding-top: 6%;
     padding-bottom: 6%;
-    border: 1px solid $border-color;
+    border: 2px solid $border-color;
+    max-width: 82px;
+    height: 52px;
+    text-align: center;
+    color: $main-gray;
+    font-weight: bold;
 }
 .add-basket__btn {
+    width: 81.25%;
     background: #63d1bb;
     color: #ffffff;
     text-transform: uppercase;
@@ -252,5 +282,40 @@ margin-bottom: 28px;
         margin-left: 35.6%;
 
     }
+
+  
+.add-basket__bcg {
+
+}
+.add-basket {
+  
+   margin-right: 13%;
+   margin-left: 13%;
+
+}
+.add-basket__wrapper {
+}
+.add-basket__title {
+font-size: 30px;
+line-height: 57px;
+}
+
+.add-basket__hint {
+font-size: 17px;
+line-height: 30px;
+
+}
+.add-basket__sizes-list {
+ box-sizing: border-box;
+ justify-content: space-between;
+}
+.add-basket__sizes-item {
+  height: 52px;
+  max-width: 112px; 
+}
+.add-basket__btn {
+   
+}
+
 }
 

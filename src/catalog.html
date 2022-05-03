@@ -10,18 +10,23 @@
     <title>catalog</title>
 </head>
 <body>
-    <div class="add-basket">
+    <div class="add-basket add-closed">
         <div class="add-basket__wrapper">
         <h3 class="add-basket__title">Добавить в корзину</h3>
         <p class="add-basket__hint">Выберите размер:</p>
         <ul class="add-basket__sizes-list">
-            <li class="add-basket__sizes-item">s</li>
-            <li class="add-basket__sizes-item">m</li>
-            <li class="add-basket__sizes-item">l</li>
+            <li>
+            <input class="add-basket__sizes-item" type="text" value="s" readonly>
+            </li>
+            <li><input class="add-basket__sizes-item" type="text" value="m" readonly>
+            </li>
+            <li><input class="add-basket__sizes-item" type="text" value="l" readonly>
+            </li>
         </ul>
         <button class="add-basket__btn" type="button">добавить</button>
         </div>
-    </div>   
+    </div>  
+    <div class="add-basket__bcg add-closed"></div> 
 <header class="page-header">
     <div class="border-wrap">
         <div class="header__wrapper">         
@@ -83,7 +88,8 @@
                         
                     </a>
                     <div class="product-item__text-part">
-                        <a class="product-item__link" href=""><p class="product-item__name">Зайчик-попрыгайчик</p></a>
+                        <a class="product-item__link" href="">
+                        <p class="product-item__name">Зайчик-попрыгайчик</p></a>
                         
                         <p class="product-item__char">Рост 30 см, вес 200 г</p>
                         <p class="product-item__price">1 200 руб.</p>
@@ -117,7 +123,7 @@
                         </picture>
                     </a>
                     <div class="product-item__text-part">
-                        <a class="product-item__link" href=""><p class="product-item__name">Зайчик-попрыгайчик</p></a>
+                        <a class="product-item__link" href=""><p class="product-item__name">Большая корзинка для белья</p></a>
                         <p class="product-item__char">Диаметр 30 см, высота 30 см</p>
                         
                         <p class="product-item__price">1 500 руб.</p>
