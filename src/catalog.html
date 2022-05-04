@@ -78,6 +78,7 @@
         <section class="catalog">
             <div class="catalog__wrapper">
             <ul class="catalog__products-list">
+                
                 <li class="product-item">
                     <a class="product-item__link" href="">
                         <picture>
@@ -88,13 +89,16 @@
                         
                     </a>
                     <div class="product-item__text-part">
+                        <div class="product-item__info">
                         <a class="product-item__link" href="">
-                        <p class="product-item__name">Зайчик-попрыгайчик</p></a>
-                        
-                        <p class="product-item__char">Рост 30 см, вес 200 г</p>
-                        <p class="product-item__price">1 200 руб.</p>
-                        <button class="product-item__buy" type="button" aria-label="добавить в корзину"></button>
-                    </div>
+                            <p class="product-item__name">Зайчик-попрыгайчик</p></a>      
+                            <p class="product-item__char">Рост 30 см, вес 200 г</p>
+                        </div>
+                            <div class="product-item__purchase">
+                                <p class="product-item__price">1 200 руб.</p>
+                                <button class="product-item__buy" type="button" aria-label="добавить в корзину"></button>
+                            </div>                      
+                   <!-- </div> из-за этого дива у меня сломалось выравнивание????? !-->
                     
                 </li>
 
@@ -107,13 +111,19 @@
                         </picture> 
                     </a>
                     <div class="product-item__text-part">
-                        <a class="product-item__link" href=""><p class="product-item__name">Корзинка для белья</p></a>
-                        <p class="product-item__char">Диаметр 15 см, высота 10 см</p>
+                        <div class="product-item__info">
+                        <a class="product-item__link" href="">
+                            <p class="product-item__name">Корзинка для белья</p></a>
+                            <p class="product-item__char">Диаметр 15 см, высота 10 см</p>
+                        </div>
+                        
+                        <div class="product-item__purchase">
                         <p class="product-item__price">690 руб.</p>
                         <button class="product-item__buy" type="button" aria-label="добавить в корзину"></button>
+                        </div>
                     </div>
                 </li>
-
+        
                 <li class="product-item">
                     <a class="product-item__link" href="">
                         <picture>
@@ -123,11 +133,16 @@
                         </picture>
                     </a>
                     <div class="product-item__text-part">
-                        <a class="product-item__link" href=""><p class="product-item__name">Большая корзинка для белья</p></a>
-                        <p class="product-item__char">Диаметр 30 см, высота 30 см</p>
-                        
+                        <div class="product-item__info">
+                        <a class="product-item__link" href="">
+                            <p class="product-item__name">Большая корзинка для игрушек</p></a>
+                            <p class="product-item__char">Диаметр 30 см, высота 30 см</p>
+                        </div>
+                
+                        <div class="product-item__purchase">
                         <p class="product-item__price">1 500 руб.</p>
                         <button class="product-item__buy" type="button" aria-label="добавить в корзину"></button>
+                    </div>
                     </div>
                 </li>
             </ul>
