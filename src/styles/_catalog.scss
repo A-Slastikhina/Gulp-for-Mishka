@@ -38,14 +38,7 @@ $mobile-fsize:17px;
 }
 
 
-.intro {
-    background-color: $footer-gray;
-}
-.intro__wrapper {
-    max-width: 1050px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
+
 
 .catalog__wrapper {
     width: 100%;
@@ -59,15 +52,7 @@ $mobile-fsize:17px;
     list-style-type: none;
     justify-content: center;
 }
-.intro__title {
-    font-weight: $main-weight;
-    font-size: 27px;
-    color:$main-color;
-    font-family: $main-font;
-    padding-top: 76px;
-    padding-bottom:81px;
-    text-align: center;
-} 
+
 
 .product-item {
     width: 81.25%; /*примерно 30% для десктопа*/
@@ -261,21 +246,7 @@ margin-bottom: 28px;
 }
 
 @media ( min-width: 321px ) {
-    
-    .intro__wrapper{
-        position: relative;
-        &::after {
-            position: absolute;
-            bottom: -10%;
-            content: url(../img/zigzag-fill-desktop.svg.png);
-            overflow-x: hidden;
-            max-width: 100%;
-        }
-    }
-    .intro__title {
-        font-size: 43px;
-        line-height: 50px;
-    }
+
     .product-item {
         display: flex;
         

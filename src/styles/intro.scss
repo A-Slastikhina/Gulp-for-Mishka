@@ -1,0 +1,72 @@
+$main-color: #000000;
+$main-size:53px;
+$main-weight:bold;
+$main-font: "Open Sans";
+$border-color:#e7e7e7;
+$main-green: #63d1bb;
+$main-gray: #444444;
+$footer-gray: #f1f1f1;
+$tablet-width:768px;
+$mobile-width:320px;
+$mobile-fsize:17px;
+
+
+
+.button {
+    border: 1px solid $main-gray;
+    background-color: #ffffff;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-gray;
+        color:  #ffffff;
+        transition: 0.5s;
+    }
+    &:active {
+        background-color: $main-gray;
+        color: #7c7c7c;
+        transition: 0.1s;
+    }
+}
+
+
+.intro {
+    background-color: $footer-gray;
+}
+.intro__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.intro__title {
+    font-weight: $main-weight;
+    font-size: 27px;
+    color:$main-color;
+    font-family: $main-font;
+    padding-top: 76px;
+    padding-bottom:81px;
+    text-align: center;
+} 
+@media ( min-width: 321px ) {
+    
+    .intro__wrapper{
+        position: relative;
+        &::after {
+            position: absolute;
+            bottom: -10%;
+            content: url(../img/zigzag-fill-desktop.svg.png);
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+    }
+    .intro__title {
+        font-size: 43px;
+        line-height: 50px;
+    }
+}
