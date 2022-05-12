@@ -37,6 +37,13 @@ $mobile-fsize:17px;
     }
 }
 
+%label-text {
+    font-size: 17px;
+    color: #000000;
+    font-weight: bold;
+    font-family:$main-font;
+    line-height: 40px;
+}
 
 .order-form {
     width: 100%;
@@ -53,9 +60,89 @@ $mobile-fsize:17px;
     color: $main-gray;
     font-size: 13px;
 }
+.order-form__title {
+    font-family: $main-font;
+    font-size: 17px;
+    font-weight: bold;
+    color: $main-green;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.order-form__name-label {
+    display: block;
+    @extend %label-text;
+}
+
+
+/* Тип изделия*/
+
 .order-form__type-label{
     display: block;
+    padding-left: 40px;
+    @extend %label-text;
+    margin-bottom: 20px;
 }
+.order-form__type-input {
+    appearance: none;
+    position: absolute;
+    -webkit-appearance: none; 
+    &:checked + .order-form__type-radio {
+        background-image: url("../img/form/mobile/point.png");
+        background-color: #fff;
+        background-position: center center;
+        background-size: 44% auto;
+        background-repeat: no-repeat   
+    }
+    &:hover +.order-form__type-radio {
+        border: 1px solid $main-green;
+    }
+    &:active +.order-form__type-radio {
+        border-color: $border-color;
+    }
+}
+
+.order-form__type-radio {
+    position: absolute;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 1px solid $main-gray;
+        border-radius: 50%;
+        margin-left: -40px;
+}
+
+/*Цвет изделия*/
+
 .order-form__color-label{
     display: block;
+    padding-left: 40px;
+    @extend %label-text;
+    margin-bottom: 20px;
+}
+
+.order-form__color-checkbox{
+    position: absolute;
+        width: 40px;
+        height: 40px ;
+        box-sizing: border-box;
+        border: 1px solid $main-gray;
+        margin-left: -40px;
+    }
+
+.order-form__color-input {
+    appearance: none;
+    position: absolute;
+    -webkit-appearance: none;
+    &:checked + .order-form__color-checkbox {
+        background-image: url("../img/form/mobile/tick.png");
+        background-color: #fff;
+        background-position: center;
+        background-size: 75% auto;
+        background-repeat: no-repeat;
+    }
+    &:hover + .order-form__color-checkbox {
+        border-color: $main-green;
+    }
 }

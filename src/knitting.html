@@ -67,37 +67,50 @@
            <form action="" method="post">
                <div class="order-form__type-part">
                    <p class="order-form__title">тип</p>
-                   <label class="order-form__type-label"><input type="radio" name="item-type" value="Аксессуар для интерьера"  checked>
-                    Аксессуар для  интерьера
+                   <label  class="order-form__type-label">
+                       <input class="order-form__type-input" type="radio" name="item-type" value="Аксессуар для интерьера"  checked>
+                       <span class="order-form__type-radio"></span>
+                       Аксессуар для  интерьера
                     </label>
-                    <label class="order-form__type-label"><input type="radio" name="item-type" value="Детская игрушка">
-                    Детская игрушка
-                    </label>  
+                    <label  class="order-form__type-label">
+                        <input class="order-form__type-input" type="radio" name="item-type" value="Детская игрушка" >
+                        <span class="order-form__type-radio"></span>
+                        Детская игрушка
+                    </label> 
+                        
+                     
                </div>
                <div class="order-form__color-part">
                    <p class="order-form__title">цвет</p>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Белый">
+                   <label class="order-form__color-label">
+                    
+                    <input class="order-form__color-input" type="checkbox" name="color" value="Белый">
+                    <span class="order-form__color-checkbox"></span>
                     Белый
                    </label>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Серый">
+                   <label class="order-form__color-label">
+                    <input class="order-form__color-input" type="checkbox" name="color"value="Серый">
+                    <span class="order-form__color-checkbox"></span>
                     Серый
                    </label>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Тиффани">
+                   <label class="order-form__color-label">
+                    <input class="order-form__color-input" type="checkbox" name="color" id="" value="Тиффани">
+                    <span class="order-form__color-checkbox"></span>
                     «Тиффани»
                    </label>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Черный">
+                   <label class="order-form__color-label">
+                    <input class="order-form__color-input" type="checkbox" name="color" value="Черный">
+                    <span class="order-form__color-checkbox"></span>
                     Черный
                    </label>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Розовый">
+                   <label class="order-form__color-label">
+                    <input class="order-form__color-input" type="checkbox" name="color" value="Розовый">
+                    <span class="order-form__color-checkbox"></span>
                     Розовый
                    </label>
-                   <label class="order-form__color-label" for="">
-                    <input type="checkbox" name="color" id="" value="Оранжевый">
+                   <label class="order-form__color-label">
+                    <input class="order-form__color-input" type="checkbox" name="color" value="Оранжевый">
+                    <span class="order-form__color-checkbox"></span>
                     Оранжевый
                    </label>
                </div>
@@ -109,11 +122,11 @@
                    </label>
                    <label class="order-form__name-label">
                     Фамилия:
-                        <input type="text" name="" id="" placeholder="Укажите фамилию*">
+                        <input type="text" name="" id="" required placeholder="Укажите фамилию*">
                     </label>
                     <label class="order-form__name-label">
                     Отчество:
-                        <input type="text" name="" id="" placeholder="Отчество, если желаете">
+                        <input type="text" name="" id=""  placeholder="Отчество, если желаете">
                     </label>
                </div>
                <p class="order-form__title">тел</p>
