@@ -64,7 +64,7 @@
                 Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
                 </p>
             </div>
-           <form action="" method="post">
+           <form class="order-form__inner" action="" method="post">
                <div class="order-form__type-part">
                    <p class="order-form__title">тип</p>
                    <label  class="order-form__type-label">
@@ -118,29 +118,42 @@
                 <p class="order-form__title">ФИО</p>
                    <label class="order-form__name-label">
                     Имя:
-                       <input type="text" name="" id="" placeholder="Введите ваше имя*">
+                       <input class="order-form__name-input" type="text" name="" id="" required placeholder="Введите ваше имя*">
                    </label>
                    <label class="order-form__name-label">
                     Фамилия:
-                        <input type="text" name="" id="" required placeholder="Укажите фамилию*">
+                        <input class="order-form__name-input" type="text" name="" id="" required placeholder="Укажите фамилию*">
                     </label>
                     <label class="order-form__name-label">
                     Отчество:
-                        <input type="text" name="" id=""  placeholder="Отчество, если желаете">
+                        <input class="order-form__name-input" type="text" name="" id=""  placeholder="Отчество, если желаете">
                     </label>
                </div>
                <p class="order-form__title">тел</p>
-                   <input type="tel" name="" id="" placeholder="+7 XXX XX XX*">
+                <input class="order-form__contacts-input--tel" type="tel" name="conatcts" id="" required placeholder="+7 XXX XX XX*">
+                
                 <p class="order-form__title">email</p>
-                <input type="email" name="" id="" placeholder="Ваш e-mail*">
+                <input class="order-form__contacts-input--mail" type="email" name="conatcts" id="" required placeholder="Ваш e-mail*">
                 <p class="order-form__title">доп</p>
-                <textarea name="" id="" cols="20" rows="10" placeholder="Опишите ваши пожелания к заказу"></textarea>
+                <textarea class="order-form__ext-input" name="ext" id="" cols="20" rows="10" placeholder="Опишите ваши пожелания к заказу"></textarea>
                 <p class="order-form__notice">
                     *Поля обязательны для заполнения
                 </p>
-                <input class="button" type="submit" value="отправить заказ">
+                <input  class="button form-button" type="submit" value="отправить заказ">
            </form>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <a class="footer__index-link" href=""></a>
+            <ul class="socials">
+                    <li class="socials__icon--IG"><a href="" alt="Инстаграм"></a></li>
+                    <li class="socials__icon--FB"><a href="" alt="Фэйсбук"></a></li>
+                    <li class="socials__icon--TW"><a href=""alt="Твиттер"></a></li>
+                </ul> 
+                <a class="footer__copyright" href="https://htmlacademy.ru/">Разработано</a>         
+    </div>
+    </footer>
+<script src="js/main.min.js"></script> 
 </body>
 </html>

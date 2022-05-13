@@ -60,14 +60,30 @@ $mobile-fsize:17px;
     color: $main-gray;
     font-size: 13px;
 }
+.order-form__inner {
+    width:81.25%;
+  margin: 0 auto;
+}
 .order-form__title {
+    display: inline-flex;
     font-family: $main-font;
     font-size: 17px;
     font-weight: bold;
     color: $main-green;
     text-transform: uppercase;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    align-items: center;
+    &::after {
+        content: "";
+        background-image: url("../img/form/mobile/titleline.png");
+       width: 180px;
+       height: 2px;
+       background-position: center;
+       background-repeat: no-repeat;
+       display: inline;
+       margin-left: 25px;
+    }
 }
 
 .order-form__name-label {
@@ -80,7 +96,7 @@ $mobile-fsize:17px;
 
 .order-form__type-label{
     display: block;
-    padding-left: 40px;
+    padding-left: 58px;
     @extend %label-text;
     margin-bottom: 20px;
 }
@@ -110,14 +126,14 @@ $mobile-fsize:17px;
         box-sizing: border-box;
         border: 1px solid $main-gray;
         border-radius: 50%;
-        margin-left: -40px;
+        margin-left: -58px;
 }
 
 /*Цвет изделия*/
 
 .order-form__color-label{
     display: block;
-    padding-left: 40px;
+    padding-left: 58px;
     @extend %label-text;
     margin-bottom: 20px;
 }
@@ -128,7 +144,7 @@ $mobile-fsize:17px;
         height: 40px ;
         box-sizing: border-box;
         border: 1px solid $main-gray;
-        margin-left: -40px;
+        margin-left: -58px;
     }
 
 .order-form__color-input {
@@ -145,4 +161,58 @@ $mobile-fsize:17px;
     &:hover + .order-form__color-checkbox {
         border-color: $main-green;
     }
+
+    &:active + .order-form__color-checkbox  {
+        border-color: $border-color;
+    }
+}
+
+/* ФИО*/
+
+%text-input {
+    display: block;
+    border: none;
+    border-bottom: 2px solid black;
+    line-height: 35px;
+    font-family: 'Open Sans';
+    font-size: 17px;
+    width: 100%;
+}
+.order-form__name-input {
+  @extend %text-input ; 
+}
+.order-form__contacts-input {
+    &--tel {
+    @extend %text-input ;
+    background-image: url("../img/form/mobile/phone.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    }
+    &--mail {
+    @extend %text-input ;
+    background-image: url("../img/form/mobile/mail.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    }
+}
+
+.order-form__ext-input {
+    margin-top: 20px;
+    width: 100%;
+    font-family: $main-font;
+    font-size: 17px;
+    resize:none;
+    
+}
+
+.order-form__notice {
+    font-size: 14px;
+    line-height: 16px;
+    font-family:$main-font;
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+.form-button {
+    width: 100%;
+    margin-bottom: 55px;
 }
