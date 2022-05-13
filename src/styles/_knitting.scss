@@ -74,6 +74,39 @@ $mobile-fsize:17px;
     margin-top: 30px;
     margin-bottom: 25px;
     align-items: center;
+    &--tel {
+        display: inline-flex;
+        font-family: $main-font;
+        font-size: 17px;
+        font-weight: bold;
+        color: $main-green;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        align-items: center;  
+    }
+    &--mail {
+        display: inline-flex;
+        font-family: $main-font;
+        font-size: 17px;
+        font-weight: bold;
+        color: $main-green;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        align-items: center;
+    }
+    &--ext {
+        display: inline-flex;
+        font-family: $main-font;
+        font-size: 17px;
+        font-weight: bold;
+        color: $main-green;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        align-items: center;
+    }
     &::after {
         content: "";
         background-image: url("../img/form/mobile/titleline.png");
@@ -87,18 +120,37 @@ $mobile-fsize:17px;
 }
 
 .order-form__name-label {
-    display: block;
-    @extend %label-text;
+    &--name {
+        display: block;
+        @extend %label-text;
+    };
+    &--surname {
+        display: block;
+        @extend %label-text;
+    }
+    &--sec-name {
+        display: block;
+        @extend %label-text;
+    };
 }
 
 
 /* Тип изделия*/
 
 .order-form__type-label{
-    display: block;
+    &--inter {
+        display: block;
+        padding-left: 58px;
+        @extend %label-text;
+        margin-bottom: 20px;
+    }
+    &--toys {
+        display: block;
     padding-left: 58px;
     @extend %label-text;
     margin-bottom: 20px;
+    }
+    
 }
 .order-form__type-input {
     appearance: none;
@@ -178,9 +230,13 @@ $mobile-fsize:17px;
     font-size: 17px;
     width: 100%;
 }
+
+
 .order-form__name-input {
   @extend %text-input ; 
 }
+
+/* Контакты*/
 .order-form__contacts-input {
     &--tel {
     @extend %text-input ;
@@ -195,6 +251,9 @@ $mobile-fsize:17px;
     background-repeat: no-repeat;
     }
 }
+
+
+
 
 .order-form__ext-input {
     margin-top: 20px;
@@ -215,4 +274,132 @@ $mobile-fsize:17px;
 .form-button {
     width: 100%;
     margin-bottom: 55px;
+}
+
+@media (min-width:768px) {
+    .order-form__inner {
+        width: auto;
+    }
+
+    /* Тип товара*/
+    .order-form__type-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;  
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .order-form__type-part .order-form__title {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        align-items: flex-start;
+    }
+    .order-form__type-label {
+        &--inter {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+        
+        
+    }
+
+    /* Цвет товара*/
+
+    .order-form__color-part {
+        background-color: #f1f1f1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .order-form__color-part .order-form__title {
+       grid-row-start: 1;
+       grid-row-end: 4;
+       margin: 0;
+        align-items: flex-start;
+   } 
+   .order-form__title::after {
+       display: none;
+   }
+
+   /* ФИО */
+   .order-form__name-part {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       padding-top: 50px;
+        padding-bottom: 50px;
+   }
+   .order-form__name-part .order-form__title {
+       align-items: flex-start;
+       grid-column-start: 1;
+       grid-column-end: 2;
+       grid-row-start: 1;
+       grid-row-end: 4;
+   }
+   .order-form__name-label {
+        &--name {
+        grid-column-start: 2;
+        grid-column-end: 5; 
+    }
+        &--surname {
+            grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        }
+        &--sec-name {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        }
+   }
+   
+  /*  Контакты */
+
+   .order-form__contacts-part {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #f1f1f1;
+   }
+   .order-form__title--mail {
+       grid-column-start: 1;
+       grid-column-end: 2;
+       grid-row-start: 2;
+       grid-row-end: 3;
+   }
+   .order-form__contacts-input {
+       &--tel {
+        background-color: #f1f1f1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        }
+        &--mail {
+        background-color: #f1f1f1;
+        grid-column-start: 2;
+        grid-column-end: 5; 
+        }
+   }
+
+   /* Доп */
+
+   .order-form__ext-part {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       padding-top: 50px;
+       padding-bottom: 50px;
+   }
+   .order-form__title--ext {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+   }
 }
