@@ -270,6 +270,7 @@ $mobile-fsize:17px;
     font-family:$main-font;
     margin-top: 18px;
     margin-bottom: 30px;
+    text-align: center;
 }
 .form-button {
     width: 100%;
@@ -277,16 +278,24 @@ $mobile-fsize:17px;
 }
 
 @media (min-width:768px) {
+    .order-form__intro {
+        font-size: 17px;
+    }
+    .order-form__title::after {
+        display: none;
+    }
     .order-form__inner {
         width: auto;
     }
 
-    /* Тип товара*/
+    /* Тип товара tablet*/
     .order-form__type-part {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;  
         padding-top: 50px;
         padding-bottom: 50px;
+        padding-right: 9.375%;
+        padding-left: 9.375%;
     }
     .order-form__type-part .order-form__title {
         grid-row-start: 1;
@@ -297,8 +306,14 @@ $mobile-fsize:17px;
     }
     .order-form__type-label {
         &--inter {
+            font-size: 19px;
             grid-row-start: 1;
             grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+        &--toys {
+            font-size: 19px;
             grid-column-start: 2;
             grid-column-end: 5;
         }
@@ -306,7 +321,7 @@ $mobile-fsize:17px;
         
     }
 
-    /* Цвет товара*/
+    /* Цвет товара tablet*/
 
     .order-form__color-part {
         background-color: #f1f1f1;
@@ -314,6 +329,12 @@ $mobile-fsize:17px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding-top: 50px;
         padding-bottom: 50px;
+        padding-right: 9.375%;
+        padding-left: 9.375%;
+    }
+
+    .order-form__color-label {
+        font-size: 19px;
     }
     .order-form__color-part .order-form__title {
        grid-row-start: 1;
@@ -321,16 +342,21 @@ $mobile-fsize:17px;
        margin: 0;
         align-items: flex-start;
    } 
-   .order-form__title::after {
-       display: none;
-   }
 
-   /* ФИО */
+   .order-form__color-serv {
+    grid-column-start: 2;
+    grid-column-end: 4;
+   }
+  
+
+   /* ФИО tablet */
    .order-form__name-part {
        display: grid;
        grid-template-columns: 1fr 1fr 1fr 1fr;
        padding-top: 50px;
         padding-bottom: 50px;
+        padding-right: 9.375%;
+        padding-left: 9.375%;
    }
    .order-form__name-part .order-form__title {
        align-items: flex-start;
@@ -341,24 +367,30 @@ $mobile-fsize:17px;
    }
    .order-form__name-label {
         &--name {
+        font-size:19px ;
         grid-column-start: 2;
         grid-column-end: 5; 
     }
         &--surname {
-            grid-row-start: 2;
+        font-size: 19px;
+        grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 2;
         grid-column-end: 5;
         }
         &--sec-name {
+        font-size: 19px;
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 2;
         grid-column-end: 5;
         }
    }
+   .order-form__name-input {
+       font-size: 19px;
+   }
    
-  /*  Контакты */
+  /*  Контакты tablet*/
 
    .order-form__contacts-part {
        display: grid;
@@ -366,6 +398,8 @@ $mobile-fsize:17px;
        padding-top: 50px;
         padding-bottom: 50px;
         background-color: #f1f1f1;
+        padding-right: 9.375%;
+        padding-left: 9.375%;
    }
    .order-form__title--mail {
        grid-column-start: 1;
@@ -380,26 +414,59 @@ $mobile-fsize:17px;
         grid-row-end: 2;
         grid-column-start: 2;
         grid-column-end: 5;
+        font-size: 19px;
         }
         &--mail {
         background-color: #f1f1f1;
         grid-column-start: 2;
         grid-column-end: 5; 
+        font-size: 19px;
         }
    }
 
-   /* Доп */
+   /* Доп tablet*/
 
    .order-form__ext-part {
        display: grid;
        grid-template-columns: 1fr 1fr 1fr 1fr;
        padding-top: 50px;
        padding-bottom: 50px;
+       row-gap: 53px;
+       padding-right: 9.375%;
+     padding-left: 9.375%;
    }
    .order-form__title--ext {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    align-items: flex-start;
    }
+
+   .form-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    max-width: 230px;
+    box-sizing: border-box;
+    }
+    .order-form__notice {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    text-align: end;
+    font-size: 17px;
+    }
+    .order-form__ext-input {
+        grid-column-end: 5;
+        grid-column-start: 2;
+    }
+    .order-form__ext-input::placeholder{
+        font-size: 19px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media (min-width:1150px)  {
+    
 }
