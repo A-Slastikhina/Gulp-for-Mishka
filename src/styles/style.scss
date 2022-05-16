@@ -6,6 +6,9 @@
     *, ::after, ::before {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 .body{
     width: 100%;
     font-family: "Open Sans";

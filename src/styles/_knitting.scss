@@ -326,11 +326,13 @@ $mobile-fsize:17px;
     .order-form__color-part {
         background-color: #f1f1f1;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
         padding-top: 50px;
         padding-bottom: 50px;
         padding-right: 9.375%;
         padding-left: 9.375%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 132px;
     }
 
     .order-form__color-label {
@@ -343,10 +345,10 @@ $mobile-fsize:17px;
         align-items: flex-start;
    } 
 
-   .order-form__color-serv {
-    grid-column-start: 2;
-    grid-column-end: 4;
+   .order-form__color-input:checked +.order-form__color-checkbox {
+       background-color: #f1f1f1;
    }
+
   
 
    /* ФИО tablet */
@@ -468,5 +470,12 @@ $mobile-fsize:17px;
 }
 
 @media (min-width:1150px)  {
-    
+    .order-form__color-part {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .form-button {
+        grid-column-start: 2;
+        grid-column-end: 3; 
+    }
 }
