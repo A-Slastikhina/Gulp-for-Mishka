@@ -42,6 +42,7 @@ $mobile-fsize:17px;
 }
 
 .production__wrapper {
+    position: relative;
     max-width: 81.25%;
     margin: 0 auto;
     box-sizing: border-box;
@@ -75,9 +76,9 @@ $mobile-fsize:17px;
 .production__video-btn {
     background-image: url(../img/catalog/play.png);
     position: absolute;
-    right: 27%;
-    bottom: -98%;
-    width: 107px;
+    left: 27%;
+    top: 27%;
+    width: 101px;
     height: 75px;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -120,6 +121,7 @@ $mobile-fsize:17px;
 .production__wrapper  {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .production__title {
     font-size: 20px;
@@ -139,11 +141,13 @@ $mobile-fsize:17px;
         right: 38.25%;
         bottom: 32%;
     }
-    .production__video-btn {
-        right: 41%;
-        bottom: -93%;
-    }
 }
+    .production__video-btn {
+        top: 22%;
+        left: 41%;
+        
+    }
+
 
 
 .production__description {
@@ -153,8 +157,10 @@ $mobile-fsize:17px;
     order: 4;
 }
 }
+
 @media ( min-width: 769px ){
     .production__wrapper {
+        position: relative;
         flex-direction: row;
         max-width:91.3% ;
         min-height: 456px;
@@ -169,8 +175,9 @@ $mobile-fsize:17px;
         height: auto;
     }
     .production__video-btn {
-        top: 127%;        
-        left: 28%;    }
+        top: 46%;
+        left: 26%;
+      }
     .production__title {
         display: block;
         margin-left: 7%;

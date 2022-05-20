@@ -71,6 +71,7 @@ $mobile-width:320px;
     list-style-type: none;
     padding-right: 50px;
     font-family: $main-font;
+    flex-grow: 1;
     }
 
     &--bottom-delivery {
@@ -79,8 +80,10 @@ $mobile-width:320px;
     font-weight: normal;
     list-style-type: none;
     color: $main-gray;
-    padding-left: 428px;
     font-family: $main-font;
+    flex-grow: 2;
+    text-align: end;
+
     }   
 }
    
@@ -215,6 +218,10 @@ justify-content: center;
     &--bottom-delivery{
     padding-left: 0px;
     padding-right: 0;
+    }
+    &--basket {
+        padding-right: 0;
+    font-size: 15px;
     }
 }
 
