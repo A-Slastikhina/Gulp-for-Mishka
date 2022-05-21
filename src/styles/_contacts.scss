@@ -91,6 +91,7 @@
 @media (max-width: $tablet-width) {
 .contacts {
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 .contacts__wrapper {
     max-width: 81.25%;
@@ -149,6 +150,9 @@
 }
 $mobile-width: 320px;
 @media (max-width: $mobile-width) {
+    .contacts {
+        margin-bottom: 170px;
+    }
     .contacts__wrapper {
         max-width: 260px;
         position: relative;
