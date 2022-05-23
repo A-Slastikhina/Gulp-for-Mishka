@@ -279,8 +279,14 @@ $mobile-fsize:17px;
 }
 
 @media (min-width:768px) {
+    .order-form__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     .order-form__intro {
         font-size: 17px;
+        grid-column-start: 2;
+        grid-column-end: 5;
     }
     .order-form__title::after {
         display: none;
@@ -428,7 +434,9 @@ $mobile-fsize:17px;
    }
 
    /* Доп tablet*/
-
+   .order-form {
+       margin-top: 80px;
+   }
    .order-form__ext-part {
        display: grid;
        grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -471,6 +479,11 @@ $mobile-fsize:17px;
 }
 
 @media (min-width:1150px)  {
+    .order-form {
+        margin-top: 130px;
+    }
+  
+    
     .order-form__color-part {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;

@@ -54,16 +54,21 @@ $mobile-fsize:17px;
     text-align: center;
 } 
 @media ( min-width: 321px ) {
-    
-    .intro__wrapper{
+    .intro  {
         position: relative;
         &::after {
             position: absolute;
-            bottom: -10%;
-            content: url(../img/zigzag-fill-desktop.svg.png);
+            bottom: -5%;
+            content: "";
+            background-image: url(../img/zigzag-fill-desktop.svg.png);
             overflow-x: hidden;
-            max-width: 100%;
-        }
+            background-size: contain;
+            background-repeat-y: no-repeat;
+            width: 100%;
+            height: 21px;
+    }}
+    .intro__wrapper{
+       
     }
     .intro__title {
         font-size: 43px;

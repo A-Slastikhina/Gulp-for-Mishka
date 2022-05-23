@@ -136,7 +136,7 @@ $mobile-width:320px;
         list-style-type: none;
         background-image: url("../img/cart.svg.png");
         background-repeat: no-repeat;
-        width: 21px;
+        width: 51px;
         height: 18px;
     }
     &--basket:hover {
@@ -190,14 +190,14 @@ $mobile-width:320px;
         border-bottom: 1px solid $border-color;
     }
     .border-wrap {
-        width: 87%;
-        padding-left: 6.5%;
-        padding-right: 6.5%;
-        margin: 0%;
+        width: 100%;
+    //    padding-left: 6.5%;
+    //    padding-right: 6.5%;
+    //    margin: 0%;
     }
     .header__wrapper {
        width: 87%;
-       margin: 0;
+       margin: 0 auto;
     }
     .burger {
         display: none;
@@ -206,13 +206,13 @@ $mobile-width:320px;
         display: none;
     }
    .nav {
-       width: 87%;
+       width: auto;
        margin: 0;
    }
     .nav__list {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: auto;
         
     }
 
@@ -221,12 +221,13 @@ $mobile-width:320px;
         display: none;
     }
         &--index {
-            width: 42%;
+            width: 400%;
         }
         &--search {
-            margin-left: 45%;
-            width: 24%;
-            padding-left: 10%;
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+
         }
         &--basket {
             padding-left: 10%;
@@ -242,6 +243,7 @@ $mobile-width:320px;
             height: 46px;
             align-items: center;
             margin-left: 0;
+            background-size: contain;
         } 
         &--basket {
             width: 40px;
