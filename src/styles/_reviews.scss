@@ -128,10 +128,13 @@ $mobile-width:320px;
 @media ( max-width: $tablet-width ) {
     .reviews {
         width: 100%;
+        background-image: url(../img/review.png);
+        background-repeat: no-repeat;
     }
     .reviews__wrapper {
         max-width: 87%;
         margin: 0 auto;
+        background-image: none;
         &::after {
             max-width: 100%;
             bottom: 3%;
@@ -144,12 +147,13 @@ $mobile-width:320px;
     }
     .review__content {
         flex-wrap: wrap;
+        padding-top: 47px;
     }
 }
 
 @media (max-width: $mobile-width) {
     .reviews__wrapper {
-        max-width: 260px;
+        max-width: 100%;
         position: relative;
         background-image: none;
         &::after {

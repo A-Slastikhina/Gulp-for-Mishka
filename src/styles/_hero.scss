@@ -188,7 +188,7 @@ $mobile-width:320px;
 
    
 .hero-nav__list {
- //   max-width: 100%;
+
     flex-wrap: wrap;
 justify-content: center;
 
@@ -232,9 +232,11 @@ justify-content: center;
 $mobile-width: 320px;
 @media (max-width: $mobile-width) {
     .hero {
-        background-size: cover;
+        background-image: url("../img/mobile/hero-mob.png");
+        background-size: contain;
         height: auto;
         width: 100%;
+        background-position: top;
     }
    
     .hero__title {
@@ -251,7 +253,8 @@ $mobile-width: 320px;
         
         display: block;
         max-width: $mobile-width;
-        top: 120px;
+        top: 50px;
+        margin-top: 0;
         &::after {
             display: none;
         }

@@ -68,7 +68,7 @@ $mobile-width:320px;
  
 .advantages__item {
     display: inline-block;
-    margin-right: 100px;
+    margin-right: 25px;
     max-width: 300px;
     margin-bottom: 60px;
     font-family: $main-font;
@@ -98,8 +98,11 @@ $mobile-width:320px;
 }
 
 @media (max-width: $mobile-width) {
+    .advantages {
+        margin-top: 110px;
+    }
     .advantages__wrapper {
-        max-width: 260px;
+        max-width: 87%;
         margin: 0 auto;
     }
     .advantages__title {
