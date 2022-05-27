@@ -231,6 +231,7 @@ $mobile-width:320px;
         }
         &--basket {
             padding-left: 10%;
+            word-break: break-all;
           
         }
     }
@@ -246,7 +247,7 @@ $mobile-width:320px;
             background-size: contain;
         } 
         &--basket {
-            width: 40px;
+            width: 66px;
             display: flex;
             justify-content: space-between;
         }
@@ -370,6 +371,7 @@ $mobile-width: 320px;
             display: contents;
             content: "Корзина: пока пуста";
             font-size: 17px;
+           
         }
     }
 

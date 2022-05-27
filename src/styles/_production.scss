@@ -60,6 +60,7 @@ $mobile-fsize:17px;
     margin-left: 9.37%;
     line-height: 24px;
     margin-bottom: 26px;
+    word-break: break-all;
     &::before {
         content: url('../img/catalog/video.png');
         padding-right: 25px;
