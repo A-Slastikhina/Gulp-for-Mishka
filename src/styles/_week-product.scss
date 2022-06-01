@@ -50,7 +50,6 @@ $mobile-width:320px;
     max-width: 1050px;
     margin: 0 auto;
     position: relative;
-    height: 631px;
     &::after {
         content: url("../img/zigzag-line-desktop.svg.png");
         position: absolute;
@@ -92,7 +91,7 @@ $mobile-width:320px;
 
 .week-product__info {
     max-width: 700px;
- //   display: inline-block;
+    display: inline-block;
     position: relative;
     font-family: $main-font;
     box-sizing: border-box;
@@ -107,7 +106,7 @@ $mobile-width:320px;
     font-size: $main-size;
     font-family: $main-font;
     font-weight: $main-weight;
-    z-index: 2;
+    z-index: 1;
     position: relative;
 
 }
@@ -138,34 +137,30 @@ $mobile-width:320px;
 
  
 .week-product__price {
-  //  margin-top: 110px;
+    margin-top: 110px;
     color: $main-gray;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
     width: 300px;
-    font-family: $main-font;
-    position: absolute;
-    top: 474px;
 }
     
 
 .week-product__button {
     margin-top: 45px;
     width: 300px;
-    position: absolute;
-    left: 17%;
-    top: 505px;
 }
  
 
 .week-product__img {
-    position: relative;
-    left: calc(100% - 50%);
+    position: absolute;
+    width: 48%;
+    left: 52%;
     z-index: 0;
-    bottom: 386px;
-    width: calc(100% - 50%);
-
+    top: 4%;
+&--mob {
+    display: none;
+}
 }
   
 @media ( max-width: $tablet-width ) {
@@ -197,10 +192,13 @@ $mobile-width:320px;
     padding: 2.7%;
 }
 .week-product__img {
-  position: absolute;
+    display: inline;
     max-width: 50%;
     left: 50%;
     top: 25%;
+&--mob {
+    display: none;
+}
 }
 
 .week-product__info {
@@ -214,14 +212,10 @@ $mobile-width:320px;
     margin-bottom: 34px;
 }
 .week-product__price {
-     margin-top: 114px;
-    position: static;
-    width: 50%;
+    margin-top: 37px;
 }
 .week-product__button {
-  
-    width: 50%;
-    position: static;
+    width: 100%;
 }
 }
 $mobile-width: 320px;
@@ -233,7 +227,6 @@ $mobile-width: 320px;
     }
     .week-product__wrapper {
         max-width: 260px;
-        min-height: 1000px;
         &::after {
             max-width: 100%;
             overflow-x: hidden;
@@ -269,11 +262,14 @@ $mobile-width: 320px;
         max-width: 100%;
     }
     .week-product__img {
+        display: none;
+    &--mob {
         display: block;
         max-width: 100%;
         width: 100%;
         position: static; 
         margin-top: 25px;
+    }
     }
     .week-product__description {
         max-width:260px;

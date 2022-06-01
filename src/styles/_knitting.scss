@@ -114,7 +114,7 @@ $mobile-fsize:17px;
     &::after {
         content: "";
         background-image: url("../img/form/mobile/titleline.png");
-       width: 668px;
+       width: 100%;
        height: 1px;
        background-position: center;
        background-repeat: repeat;
@@ -126,7 +126,7 @@ $mobile-fsize:17px;
     &::after {
         content: "";
         background-image: url("../img/form/mobile/titleline.png");
-       width: 668px;
+       width: 100%;
        height: 1px;
        background-position: center;
        background-repeat: repeat;
@@ -138,7 +138,7 @@ $mobile-fsize:17px;
     &::after {
        content: "";
        background-image: url("../img/form/mobile/titleline.png");
-       width: 668px;
+       width: 100%;
        height: 1px;
        background-position: center;
        background-repeat: repeat;
@@ -328,8 +328,19 @@ $mobile-fsize:17px;
         grid-column-start: 2;
         grid-column-end: 5;
     }
-    .order-form__title::after {
+    .order-form__title{
+    &::after {
         display: none;
+    }
+    &--tel::after {
+        display: none;
+    }
+    &--mail::after {
+        display: none;
+    }
+    &--ext::after {
+        display: none;
+    }
     }
     .order-form__inner {
         width: auto;
@@ -459,24 +470,31 @@ $mobile-fsize:17px;
 
    .order-form__contacts-part {
        display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      // grid-template-rows: 1fr 1fr 1fr 1fr;
        padding-top: 50px;
         padding-bottom: 50px;
         background-color: #f1f1f1;
         padding-right: 9.375%;
         padding-left: 9.375%;
    }
-   .order-form__title--mail {
-       grid-column-start: 1;
-       grid-column-end: 2;
-       grid-row-start: 2;
-       grid-row-end: 3;
+   .order-form__title{
+    &--mail {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    &--tel {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    }
    }
+   
    .order-form__contacts-input {
        &--tel {
         background-color: #f1f1f1;
-        grid-row-start: 1;
-        grid-row-end: 2;
         grid-column-start: 2;
         grid-column-end: 5;
         font-size: 19px;
